@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
   const navbar = document.querySelector('.custom-navbar');
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarCollapse = document.querySelector('#navbarNav');
 
   // Function to handle scroll event
   function handleScroll() {
@@ -56,16 +58,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Initial call to handle scroll for setting active link on page load
   handleScroll();
-});
 
-document.addEventListener('DOMContentLoaded', function () {
-  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-  const navbarToggler = document.querySelector('.navbar-toggler');
-  const navbarCollapse = document.querySelector('.navbar-collapse');
+  // Toggle navbar-collapse visibility
+  navbarToggler.addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent default behavior if necessary
 
+    // Toggle the 'show' class on the navbar-collapse
+    navbarCollapse.classList.toggle('show');
+
+    // Adjust the navbar-toggler state based on visibility
+    const isNavbarVisible = navbarCollapse.classList.contains('show');
+    navbarToggler.classList.toggle('collapsed', !isNavbarVisible);
+    navbarToggler.setAttribute('aria-expanded', isNavbarVisible ? 'true' : 'false');
+  });
+
+  // Close the navbar when a nav link is clicked (for smaller screens)
   navLinks.forEach((link) => {
     link.addEventListener('click', function () {
-      if (window.innerWidth <= 991.98) {
+      if (window.innerWidth <= 767) {
         navbarToggler.classList.add('collapsed');
         navbarToggler.setAttribute('aria-expanded', 'false');
         navbarCollapse.classList.remove('show');

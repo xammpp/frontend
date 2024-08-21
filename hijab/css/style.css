@@ -3,12 +3,21 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: #36454f;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 /* Navbar Section */
 #navbarLogo {
   color: #dcae96;
   transition: color 0.4s ease;
+}
+
+.navbar {
+  width: 100%;
+  box-sizing: border-box; /* Menghindari overflow dari padding dan border */
+  overflow-x: hidden; /* Mencegah scroll horizontal */
 }
 
 .custom-navbar.solid #navbarLogo {
@@ -29,17 +38,16 @@ body {
 }
 
 .navbar-brand {
-  font-weight: bold;
-  font-size: 28px;
+  font-size: 1.5rem;
   transition: color 0.4s ease;
 }
 
 .navbar-nav .nav-link {
   color: #dcae96;
   font-weight: 400;
-  font-size: 1.1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  font-size: 0.9rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   position: relative;
   transition: color 0.4s ease;
 }
@@ -82,8 +90,8 @@ body {
 
 .navbar-toggler-icon {
   background-image: none;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,58 +107,91 @@ body {
   color: #fff;
 }
 
-@media (max-width: 991.98px) {
-  .custom-navbar {
-    height: 70px;
+/* Styling untuk navbar pada ukuran layar kecil */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 0; /* Menghapus padding horizontal pada layar kecil */
+  }
+
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem; /* Menyesuaikan padding tombol toggler */
+    font-size: 1.25rem; /* Ukuran font pada tombol toggler */
+    border: none; /* Menghapus border default */
+    position: relative; /* Memastikan posisi relative untuk menghindari pergeseran */
+    z-index: 1050; /* Pastikan tombol berada di atas menu dropdown */
+  }
+
+  .navbar-toggler-icon {
+    background-image: none; /* Menghapus background image default */
+    font-size: 1.5rem; /* Ukuran font icon pada tombol toggler */
+  }
+
+  .navbar-brand {
+    font-size: 1rem; /* Mengurangi ukuran font logo pada layar mobile */
   }
 
   .navbar-nav .nav-link {
-    font-size: 1rem;
+    font-size: 0.75rem; /* Mengurangi ukuran font navlink pada layar mobile */
+    padding: 0.5rem 0; /* Mengurangi padding item navlink */
   }
 
-  .navbar-collapse.show .navbar-nav .nav-link {
-    transition: none;
-    background-color: #36454f;
-    color: #fff;
-    border-radius: 5px;
-    margin-top: 16px;
-    margin-bottom: 10px;
-    padding: 10px 15px;
+  .navbar-collapse {
+    display: none; /* Menu dropdown tersembunyi secara default */
+    flex-direction: column;
+    align-items: center; /* Menyelaraskan item nav ke tengah */
+    width: 100%; /* Menetapkan lebar navbar collapse */
+    position: absolute; /* Mengatur posisi absolute untuk menghindari pergeseran */
+    top: 80px; /* Menyesuaikan posisi top untuk menghindari overlap dengan navbar */
+    left: 0;
+    background-color: #fff; /* Menetapkan background-color untuk navbar collapsible */
+    z-index: 1000; /* Menetapkan z-index untuk memastikan elemen collapsible berada di atas */
+    overflow-y: auto; /* Mengatur overflow-y agar tidak menyebabkan scroll horizontal */
   }
 
-  .navbar-collapse.show .navbar-nav .nav-link:hover {
-    background-color: #e6e6fa;
-    color: #444444;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .navbar-nav {
-    text-align: center;
+  .navbar-collapse.show {
+    display: flex; /* Tampilkan menu dropdown ketika tombol hamburger diklik */
   }
 
-  .navbar-nav .nav-link {
-    padding: 0.5rem 0;
+  .navbar-collapse .navbar-nav {
+    width: 100%; /* Menetapkan lebar navbar-nav agar sesuai dengan navbar collapse */
+    padding: 0; /* Menghapus padding default */
+  }
+
+  .navbar-collapse .nav-item {
+    width: 100%; /* Menetapkan lebar setiap item nav agar sesuai dengan navbar collapse */
+  }
+
+  .navbar-collapse .nav-link {
+    width: 100%; /* Menetapkan lebar setiap link nav agar sesuai dengan navbar collapse */
+    text-align: center; /* Menyelaraskan teks di tengah */
+    padding: 0.75rem 0; /* Menambahkan padding vertikal untuk item navlink */
   }
 }
 
 /* Hero Section */
 .hero {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
   min-height: 100vh;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   background-color: #ffffff;
   display: flex;
   align-items: center;
 }
 
+.hero-content {
+  box-sizing: border-box; /* Menghindari overflow dari padding dan border */
+}
+
 .hero-image {
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
 }
 
 .hero-title {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #36454f;
 }
@@ -160,14 +201,14 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
   color: #36454f;
 }
 
 .hero-btn {
   padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   background-color: #dcae96;
   border: none;
   color: #fff;
@@ -180,27 +221,31 @@ body {
   background-color: #36454f;
 }
 
+/* Hero Section Adjustments for Mobile and Tablet */
 @media (max-width: 767.98px) {
   .hero {
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     text-align: center;
   }
 
   .hero-image {
     margin-top: 24px;
-    max-width: 60%;
+    max-width: 70%;
     margin-bottom: 2rem;
   }
 
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   .hero-btn {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -221,14 +266,14 @@ body {
 }
 
 .about-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #dcae96;
   margin-bottom: 10px;
 }
 
 .about-text {
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #444444;
 }
 
@@ -243,30 +288,30 @@ body {
   transform: scale(1.05);
 }
 
+/* About Section Adjustments for Mobile and Tablet */
 @media (max-width: 767.98px) {
-  #about {
-    padding-top: 70px;
-  }
-
   .about .row {
     flex-direction: column-reverse;
+    padding: 0 1rem; /* Menambahkan padding horizontal untuk mencegah teks menyentuh tepi layar */
   }
 
   .about-title {
-    margin-top: 10px;
-    font-size: 1.75rem;
+    font-size: 1.25rem; /* Sesuaikan ukuran font agar lebih proporsional pada layar kecil */
     text-align: center;
+    margin-top: 1rem; /* Menambahkan margin atas agar lebih seimbang */
   }
 
   .about-text {
-    font-size: 1rem;
+    font-size: 0.875rem; /* Sesuaikan ukuran font agar tidak terlalu kecil */
     text-align: center;
-    margin-bottom: 2rem;
+    margin: 0 auto; /* Mengatur margin otomatis untuk menyeimbangkan teks */
+    max-width: 90%; /* Menambahkan batas lebar maksimum */
   }
 
   .about-image {
-    max-width: 80%;
-    margin: 0 auto;
+    max-width: 100%; /* Memastikan gambar tidak melebihi lebar layar */
+    margin: 1rem auto; /* Menambahkan margin atas dan bawah */
+    display: block; /* Menyelaraskan gambar secara blok */
   }
 }
 
@@ -292,76 +337,123 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card img {
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.card-body {
-  text-align: center;
-}
-
-.card-title {
-  color: #dcae96;
-}
-
-.card-text {
-  font-weight: 300;
-}
-
-.product-card:hover img {
-  transform: scale(1.05);
+  border-radius: 10px;
 }
 
 .product-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.product-btn {
-  background-color: #dcae96;
-  border: 1px solid #dcae96;
+.product-name {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 0.5rem;
 }
 
-.product-btn:hover {
-  background-color: #36454f;
-  border: 1px solid #36454f;
+.product-price {
+  font-size: 1.2rem;
+  color: #dcae96;
 }
 
-@media (max-width: 991.98px) {
-  .products .row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .product-card {
-    margin-bottom: 1.5rem;
-    width: 90%;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-}
-
+/* Produk Section Adjustments for Mobile and Tablet */
 @media (max-width: 767.98px) {
-  .products .row {
+  .products {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+
+  .product-card {
+    margin-bottom: 2rem; /* Menambahkan margin bawah lebih besar untuk jarak antar card pada layar kecil */
+  }
+
+  .section-title {
+    font-size: 1.5rem; /* Mengurangi ukuran font untuk judul section produk */
+  }
+
+  .product-name,
+  .product-price {
+    font-size: 0.875rem; /* Menyesuaikan ukuran font untuk nama dan harga produk */
+  }
+}
+
+/* Footer Section */
+.footer {
+  background-color: #dcae96;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: left;
+}
+
+.footer .footer-text {
+  margin: 0;
+}
+
+.footer .social-logo img {
+  max-width: 24px;
+  margin-left: 15px;
+}
+
+.footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .footer-content .footer-text {
+  margin-left: 15px;
+}
+
+.footer .footer-content .social-logo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer .social-logo img {
+  margin-left: 15px;
+}
+
+.footer .footer-content .footer-text {
+  font-size: 0.875rem;
+}
+
+.footer .social-logo img {
+  transition: filter 0.3s ease-in-out;
+}
+
+.footer .social-logo img:hover {
+  filter: brightness(0.8);
+}
+
+/* Footer Section Adjustments for Mobile and Tablet */
+@media (max-width: 767.98px) {
+  .footer {
+    padding: 1rem;
+    text-align: center; /* Menyelaraskan teks footer di tengah pada layar kecil */
+  }
+
+  .footer .footer-content {
     flex-direction: column;
     align-items: center;
   }
 
-  .product-card {
-    margin-bottom: 1.5rem;
+  .footer .footer-content .social-logo {
+    margin-top: 0.5rem; /* Menambahkan margin atas untuk jarak antara teks dan logo sosial media */
+  }
+
+  .footer .footer-content .footer-text {
+    font-size: 0.75rem; /* Mengurangi ukuran font untuk teks footer */
+    margin-bottom: 0.5rem; /* Menambahkan margin bawah untuk jarak antar teks dan logo sosial media */
+  }
+
+  .footer .social-logo img {
+    max-width: 20px; /* Menyesuaikan ukuran logo sosial media */
+    margin-left: 10px;
   }
 }
 
@@ -382,6 +474,7 @@ body {
 .gallery-item {
   overflow: hidden; /* Menghindari gambar melampaui batas item galeri */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada gambar */
+  width: 100%;
 }
 
 .gallery-item img {
@@ -394,110 +487,13 @@ body {
   transform: scale(1.05); /* Zoom in gambar saat hover */
 }
 
+/* Gallery Section Adjustments for Mobile and Tablet */
 @media (max-width: 767.98px) {
   .gallery .row {
-    justify-content: center; /* Memusatkan gambar pada layar kecil */
+    justify-content: center;
   }
 
   .gallery-item {
-    margin-bottom: 1.5rem; /* Jarak bawah antar item galeri */
+    margin-bottom: 1rem;
   }
-}
-
-/* Footer */
-.footer {
-  background-color: #dcae96;
-  color: white;
-  padding: 2rem 0; /* Tinggi footer */
-}
-
-.footer .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px; /* Maksimum lebar container */
-  margin-bottom: 1rem;
-}
-
-.social-icons {
-  display: flex;
-  align-items: center;
-}
-
-.social-icons a {
-  color: white; /* Warna ikon sosial media */
-  font-size: 1.5rem; /* Ukuran ikon sosial media */
-  margin: 0 0.75rem;
-  transition: color 0.3s ease;
-  text-decoration: none;
-}
-
-.social-icons a:hover {
-  color: #36454f; /* Warna ikon saat hover */
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Menyelaraskan ke kiri untuk layar lebar */
-}
-
-.contact-info address {
-  margin: 0;
-  font-style: normal; /* Menghilangkan gaya italic default */
-}
-
-.contact-info address p {
-  margin: 0.5rem 0;
-}
-
-.contact-info address a {
-  color: white; /* Warna link email */
-  text-decoration: none;
-}
-
-.contact-info address a:hover {
-  color: #36454f; /* Warna link email saat hover */
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.footer-bottom p {
-  margin: 0;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 767.98px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .contact-info {
-    align-items: center; /* Menyelaraskan informasi kontak di tengah untuk layar kecil */
-  }
-}
-
-/* AOS */
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in.active {
-  opacity: 1;
-  transform: translateY(0);
 }

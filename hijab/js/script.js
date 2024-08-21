@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const navbar = document.querySelector('.custom-navbar');
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-  const navbarToggler = document.querySelector('.navbar-toggler');
-  const navbarCollapse = document.querySelector('.navbar-collapse');
 
   // Function to handle scroll event
   function handleScroll() {
@@ -56,15 +54,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Toggle navbar collapse on link click
+  // Initial call to handle scroll for setting active link on page load
+  handleScroll();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+
   navLinks.forEach((link) => {
     link.addEventListener('click', function () {
-      if (navbarCollapse.classList.contains('show')) {
-        navbarToggler.click(); // Menutup navbar setelah klik link
+      if (window.innerWidth <= 991.98) {
+        navbarToggler.classList.add('collapsed');
+        navbarToggler.setAttribute('aria-expanded', 'false');
+        navbarCollapse.classList.remove('show');
       }
     });
   });
-
-  // Initial call to handle scroll for setting active link on page load
-  handleScroll();
 });

@@ -121,6 +121,15 @@ body {
 }
 
 /* Home Section */
+#home,
+#about,
+#gallery,
+#product,
+#contact {
+  overflow: hidden;
+  width: 100%;
+}
+
 #home {
   background-image: url('img/background.jpg');
   background-size: cover;
@@ -129,7 +138,7 @@ body {
   position: relative;
   min-height: 100vh; /* Memastikan section memiliki tinggi penuh layar */
   transition: background-image 1s ease; /* Transisi gambar latar belakang */
-  overflow-x: hidden;
+  overflow: hidden;
   margin: 0;
   padding: 0;
   width: 100%; /* Tambahkan ini */

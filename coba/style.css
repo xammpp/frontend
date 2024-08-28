@@ -1,0 +1,59 @@
+.nav-tabs {
+  justify-content: center;
+}
+
+.nav-tabs .nav-link {
+  color: #00aa88;
+  font-weight: 600;
+}
+
+.card-produk {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  height: 300px; /* Membatasi tinggi card agar sesuai dengan tinggi gambar */
+  margin-bottom: 170px;
+}
+
+.card-produk img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  flex-shrink: 0; /* Agar gambar tidak mengecil */
+}
+.card-produk .deskripsi {
+  flex: 1;
+  padding-left: 1rem;
+  overflow-y: auto; /* Membuat deskripsi dapat di-scroll jika melebihi tinggi gambar */
+  max-height: 400px; /* Membatasi tinggi deskripsi agar sesuai dengan gambar */
+}
+.tab-content {
+  margin-top: 1rem;
+}
+
+.product-description {
+  list-style-type: none;
+  padding: 0;
+}
+.product-description li {
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 768px) {
+  .card-produk {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .card-produk img {
+    max-width: 100%;
+    height: auto;
+  }
+  .card-produk .deskripsi {
+    padding-left: 0;
+    padding-top: 1rem;
+    max-width: 80%;
+    max-height: none; /* Membebaskan tinggi deskripsi pada perangkat kecil */
+  }
+}

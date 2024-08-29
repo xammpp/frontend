@@ -7,6 +7,11 @@
   font-weight: 600;
 }
 
+.nav-tabs .nav-link.active {
+  background-color: #00aa88;
+  color: #fff;
+}
+
 .card-produk {
   display: flex;
   align-items: flex-start;
@@ -17,6 +22,18 @@
 
 .card-produk img {
   width: 300px;
+  height: 400px;
+  object-fit: cover;
+  flex-shrink: 0; /* Agar gambar tidak mengecil */
+}
+#produk2 .card-produk img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  flex-shrink: 0; /* Agar gambar tidak mengecil */
+}
+#produk3 .card-produk img {
+  width: 400px;
   height: 400px;
   object-fit: cover;
   flex-shrink: 0; /* Agar gambar tidak mengecil */

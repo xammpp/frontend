@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Warung Makan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+HR+Lijeva:wght@100..400&display=swap" rel="stylesheet" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70">
+    <!-- navbar section -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-transparent">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="#home">Warung</a>
+        <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto d-flex gap-3 fw-semibold text-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#service">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#product">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <div class="cart">
+              <a class="btn btn-outline-light text-white py-2 fw-semibold" href="#basket"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar section -->
+
+    <!-- hero section -->
+    <section id="home" class="home">
+      <div class="container-fluid banner d-flex justify-content-center align-items-center">
+        <div class="home-content mt-3">
+          <h1 data-aos="fade-down" data-aos-duration="1500" class="title fw-bold fs-1 text-light text-center">Welcome to <span>Warung Makan</span></h1>
+          <p data-aos="fade-up" data-aos-duration="1500" class="text-light text-center fs-5 fw-medium">Provides the Most Delicious Food</p>
+          <div class="input-group mb-3">
+            <select class="form-select shadow-sm" id="inputGroupSelect04" aria-label="Example select with button addon">
+              <option selected>Choose Category</option>
+              <option value="1">Cake</option>
+              <option value="2">Food</option>
+              <option value="3">Snacks</option>
+              <option value="4">Drink</option>
+            </select>
+            <button class="btn btn-outline-light" type="button">Search</button>
+          </div>
+          <div class="button d-flex justify-content-center gap-3">
+            <a href="#promo" class="btn btn-dark py-2">View More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- hero section -->
+
+    <!-- promo -->
+    <section id="promo" class="promo mb-5">
+      <div class="container-fluid mt-5">
+        <h1 data-aos="fade-down" data-aos-duration="1500" class="fw-bold text-center">Food Promotions</h1>
+
+        <div class="row mt-5 d-flex justify-content-center">
+          <div class="col-sm-6 col-lg-3 mb-3 animated">
+            <div data-aos="fade-up" data-aos-duration="1500" class="card">
+              <img src="./img/product-4-copy.png" class="card-img-top" alt="product-4" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold fs-3">Nasi Padang</h5>
+                <p class="text-danger">Price <span class="text-decoration-line-through">Rp. 20.000</span> Rp.10.000</p>
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, omnis.</p>
+                <p class="card-text text-end mt-5 fw-lighter">Promo arrived &raquo; 1 Jan 2025</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 mb-3 animated">
+            <div data-aos="fade-down" data-aos-duration="1500" class="card">
+              <img src="./img/product-2-copy.png" class="card-img-top" alt="product-2" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold fs-3">Nasi Goreng</h5>
+                <p class="text-danger">Price <span class="text-decoration-line-through">Rp. 20.000</span> Rp.10.000</p>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, minima.</p>
+                <p class="card-text text-end mt-5 fw-lighter">Promo arrived &raquo; 1 Jan 2025</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 mb-3 animated">
+            <div data-aos="fade-up" data-aos-duration="1500" class="card">
+              <img src="./img/product-3-copy.png" class="card-img-top" alt="product-3" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold fs-3">Mie Goreng</h5>
+                <p class="text-danger">Price <span class="text-decoration-line-through">Rp. 20.000</span> Rp.10.000</p>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, vitae.</p>
+                <p class="card-text text-end mt-5 fw-lighter">Promo arrived &raquo; 1 Jan 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="button text-end">
+          <a href="#" class="btn btn-dark btn-lg mt-3">Get all &raquo;&raquo;</a>
+        </div>
+      </div>
+    </section>
+    <!-- promo -->
+
+    <!-- service section -->
+    <section id="service" class="service bg-dark">
+      <div class="container-fluid">
+        <h1 data-aos="fade-down" data-aos-duration="1500" class="fw-bold mb-3 text-light">Our Services</h1>
+
+        <div class="content d-flex gap-4 flex-sm-row flex-column justify-content-center align-items-center">
+          <div data-aos="fade-up" data-aos-duration="1500" class="card-content shadow p-3 rounded bg-light">
+            <div class="icon">
+              <i class="fa-solid fa-motorcycle fs-1 mb-2"></i>
+            </div>
+            <h4 class="fw-bold">Delivery</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, earum!</p>
+          </div>
+          <div data-aos="fade-down" data-aos-duration="1500" class="card-content shadow p-3 rounded bg-light">
+            <div class="icon">
+              <i class="fa-solid fa-basket-shopping fs-1 mb-2"></i>
+            </div>
+            <h4 class="fw-bold">Take Away</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, earum!</p>
+          </div>
+          <div data-aos="fade-up" data-aos-duration="1500" class="card-content shadow p-3 rounded bg-light">
+            <div class="icon">
+              <i class="fa-solid fa-couch mb-2 fs-1"></i>
+            </div>
+            <h4 class="fw-bold">Reserve</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, earum!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- service section -->
+
+    <!-- product section -->
+    <section id="product" class="product d-flex justify-content-center">
+      <div class="container-fluid">
+        <h1 data-aos="fade-down" data-aos-duration="1500" class="fw-bold text-center mb-4">Our Product</h1>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div data-aos="fade-up" data-aos-duration="1500" class="card">
+              <img src="./img/product-1-copy.png" class="card-img-top" alt="product-1" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Cake</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="button d-flex gap-3">
+                  <a href="#" class="btn btn-success"><i class="fa-solid fa-phone"></i> Order Now</a>
+                  <a href="#" class="btn btn-dark"><i class="fa-solid fa-bag-shopping"></i> Add Card</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div data-aos="fade-down" data-aos-duration="1500" class="card">
+              <img src="./img/product-2-copy.png" class="card-img-top" alt="product-2" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Nasi Goreng</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="button d-flex gap-3">
+                  <a href="#" class="btn btn-success"><i class="fa-solid fa-phone"></i> Order Now</a>
+                  <a href="#" class="btn btn-dark"><i class="fa-solid fa-bag-shopping"></i> Add Card</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div data-aos="fade-up" data-aos-duration="1500" class="card">
+              <a href="./img/product-3-copy.png" data-lightbox="product-mie-goreng" data-title="Mie Goreng">
+                <img src="./img/product-3-copy.png" class="card-img-top" alt="product-3" />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Mie Goreng</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="button d-flex gap-3">
+                  <a href="#" class="btn btn-success"><i class="fa-solid fa-phone"></i> Order Now</a>
+                  <a href="#" class="btn btn-dark"><i class="fa-solid fa-bag-shopping"></i> Add Card</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div data-aos="fade-down" data-aos-duration="1500" class="card">
+              <img src="./img/product-4-copy.png" class="card-img-top" alt="product-4" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Nasi Padang</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="button d-flex gap-3">
+                  <a href="#" class="btn btn-success"><i class="fa-solid fa-phone"></i> Order Now</a>
+                  <a href="#" class="btn btn-dark"><i class="fa-solid fa-bag-shopping"></i> Add Card</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div data-aos="fade-up" data-aos-duration="1500" class="card">
+              <img src="./img/product-5-copy.png" class="card-img-top" alt="product-5" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Nasi Kuning</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="button d-flex gap-3">
+                  <a href="#" class="btn btn-success"><i class="fa-solid fa-phone"></i> Order Now</a>
+                  <a href="#" class="btn btn-dark"><i class="fa-solid fa-bag-shopping"></i> Add Card</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div data-aos="fade-down" data-aos-duration="1500" class="card">
+              <img src="./img/product-6-copy.png" class="card-img-top" alt="product-6" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Nasi Pecel</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="button d-flex gap-3">
+                  <a href="#" class="btn btn-success"><i class="fa-solid fa-phone"></i> Order Now</a>
+                  <a href="#" class="btn btn-dark"><i class="fa-solid fa-bag-shopping"></i> Add Card</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div data-aos="fade-up" data-aos-duration="1500" class="card">
+              <img src="./img/product-7-copy.png" class="card-img-top" alt="product-7" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Es Campur</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="button d-flex gap-3">
+                  <a href="#" class="btn btn-success"><i class="fa-solid fa-phone"></i> Order Now</a>
+                  <a href="#" class="btn btn-dark"><i class="fa-solid fa-bag-shopping"></i> Add Card</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 mb-4">
+            <div data-aos="fade-down" data-aos-duration="1500" class="card">
+              <img src="./img/product-8-copy.png" class="card-img-top" alt="product-8" />
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Es Kelapa Muda</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="button d-flex gap-3">
+                  <a href="#" class="btn btn-success"><i class="fa-solid fa-phone"></i> Order Now</a>
+                  <a href="#" class="btn btn-dark"><i class="fa-solid fa-bag-shopping"></i> Add Card</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="button mb-5 d-flex justify-content-end">
+          <a href="#" class="btn btn-dark">All Products &raquo;&raquo;</a>
+        </div>
+      </div>
+    </section>
+    <!-- product section -->
+
+    <!-- footer -->
+    <footer id="contact" class="bg-dark text-white py-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <h5 class="fw-bold">Warung Makan</h5>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5>Contact Us</h5>
+            <p><i class="fa-solid fa-location-dot"></i> Bangorejo, Banyuwangi, Jawa Timur</p>
+            <p><i class="fa-solid fa-envelope"></i> warungmakan@warung.com</p>
+            <p><i class="fa-solid fa-phone"></i> +62 812-3456-7890</p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5>Follow Us</h5>
+            <a href="#" class="text-white me-2"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#" class="text-white me-2"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
+          </div>
+        </div>
+        <hr class="border-secondary" />
+        <div class="text-center">
+          <p class="mb-0">&copy; 2024 Warung. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- Bootstrap CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

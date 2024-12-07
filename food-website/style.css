@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* navbar section */
+.navbar-transparent {
+  background-color: transparent;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6);
+}
+
+.navbar-scrolled {
+  background-color: rgba(0, 0, 0, 0.8); /* Warna hitam transparan */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+}
+.cart a.btn:hover {
+  color: #000 !important;
+  border: 1px solid #fff;
+}
+
+.navbar-brand {
+  font-family: 'Playwrite HR Lijeva', cursive;
+}
+/* navbar section */
+
+/* home section */
+.banner {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./img/hero.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.home-content .title {
+  letter-spacing: 10px;
+}
+
+.home-content p {
+  letter-spacing: 5px;
+}
+
+@media (max-width: 576px) {
+  .home-content .title {
+    letter-spacing: 1px;
+  }
+
+  .home-content p {
+    letter-spacing: 1px;
+  }
+}
+/* home section */
+
+/* promo */
+
+.animated {
+  transition: transform 0.3s ease-in-out;
+}
+
+.animated:hover {
+  transform: scale(1.1);
+}
+/* promo */
+
+/* service section */
+.service {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 5rem; */
+}
+
+.card-content {
+  transition: transform 0.3s ease-in-out;
+}
+.card-content:hover {
+  transform: scale(0.9);
+}
+
+.card-content .icon i {
+  border: 2px solid #000;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+/* service section */
+
+/* product section */
+.product {
+  padding-top: 5rem;
+}
+
+.card {
+  overflow: hidden;
+}
+
+.card img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+/* product section */

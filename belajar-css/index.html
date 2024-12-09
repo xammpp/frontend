@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar CSS</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- navbar 1 -->
+    <!-- <nav class="navbar">
+      <div class="logo">Logo</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </nav> -->
+    <!-- navbar 1 -->
+
+    <!-- navbar 2 -->
+    <nav class="navbar">
+      <div class="logo">MyBrand</div>
+      <ul class="nav-links">
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Tentang</a></li>
+        <li><a href="#">Layanan</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Kontak</a></li>
+      </ul>
+      <!-- Hamburger Menu -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <!-- navbar 2 -->
+
+    <!-- tutorial card -->
+    <!-- <div class="card-container">
+      <div class="card">
+        <img src="./img/product-1.jpg" alt="image" class="card-img" />
+        <div class="card-body">
+          <h3 class="card-title">Card Title</h3>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, et.</p>
+          <a href="#" class="card-btn">Read More</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./img/product-1.jpg" alt="image" class="card-img" />
+        <div class="card-body">
+          <h3 class="card-title">Card Title</h3>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, et.</p>
+          <a href="#" class="card-btn">Read More</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="./img/product-1.jpg" alt="image" class="card-img" />
+        <div class="card-body">
+          <h3 class="card-title">Card Title</h3>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, et.</p>
+          <a href="#" class="card-btn">Read More</a>
+        </div>
+      </div>
+    </div> -->
+    <!-- tutorial card -->
+
+    <!-- tutorial button -->
+    <!-- <button class="btn-blue">Klik me</button>
+    <a href="#" class="btn-blue">Klik me</a><br /><br /> -->
+    <!-- tutorial button -->
+
+    <!-- js -->
+    <!-- <script>
+      function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+      }
+    </script> -->
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+
+        const hamburger = document.querySelector('.hamburger');
+        hamburger.classList.toggle('toggle');
+      }
+    </script>
+  </body>
+</html>

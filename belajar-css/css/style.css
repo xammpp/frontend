@@ -200,7 +200,7 @@ body {
 } */
 
 /* card */
-/* .card-container {
+.card-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -271,7 +271,7 @@ body {
   .card {
     max-width: 50%;
   }
-} */
+}
 
 /* tombol */
 /* button,
